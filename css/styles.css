@@ -113,6 +113,10 @@ a, button {
   text-decoration: none;
 }
 
+a:hover {
+  color: var(--light-green);
+}
+
 section {
   max-width: 1600px;
   margin: 0 auto;
@@ -131,12 +135,23 @@ section {
 }
 
 .white {
-  background: white;
+  color: var(--black);
+  background: var(--white);
+}
+
+.white:hover {
+  color: var(--white);
+  background: var(--black);
 }
 
 .black {
-  color: white;
-  background: black;
+  color: var(--white);
+  background: var(--black);
+}
+
+.black:hover {
+  color: var(--black);
+  background: var(--white);
 }
 
 /* =============== Header ====================== */
@@ -161,21 +176,15 @@ header .wrapper {
 header h1 {
   display: inline-block;
   font-size: 1.5rem;
-  /* line-height: 0.9rem; */
   color: rgba(255, 255, 255, 0.7);
   margin-top: 10px;
   max-width: 33%;
-  /* margin: 0 10% 0 0; */
 }
 
 header .hamburgerMenu {
   float: right;
   margin-top: 10px;
 }
-
-/* 1150px */
-/* 980px */
-/* 585px */
 
 /* Landscape phone to portrait tablet */
 @media (min-width: 585px) {
@@ -275,7 +284,6 @@ header nav a:hover {
 }
 
 ul.social {
-  /* display: inline; */
   float: right;
 }
 
@@ -295,8 +303,6 @@ ul.social {
       position: absolute;
       bottom: 0;
       right: 0;
-      /* text-align: center; */
-      /* float: right; */
     }
   div .hamburgerMenu {
     display: none;
@@ -344,8 +350,6 @@ section.suzie .readMore {
     height: 50%;
     float: left;
     margin: 5.45rem 2rem 5.45rem 0rem;
-    /* margin-right: 2rem; */
-    /* margin-top: 5.45rem; */
   }
 
   section.suzie h2 {
@@ -365,7 +369,6 @@ section.suzie .readMore {
   section.suzie img {
     width: 15.75rem;
     height: 15.75rem;
-    /* object-fit: cover; */
   }
   section.suzie p {
     line-height: 1.4rem;
@@ -401,9 +404,7 @@ section.friends h2 {
 
 section.friends div {
   width: calc((100% - 20%) / 2);
-  /* width: 25%; */
   margin: 0 4.15%;
-  /* width: calc((100% / 2) - 20px); */
   float: left;
   padding: 1px;
 }
@@ -414,50 +415,11 @@ section.friends img {
   display: block;
 }
 
-/* 
-section.friends div {
-  width: calc((100%) / 2);
-  width: 25%;
-  margin: 0 1.25%;
-  float: left;
-  padding: 0;
-}
-
-section.friends div:nth-of-type(1) {
-  margin-left: auto;
-}
-
-section.friends div:nth-of-type(3) {
-  margin-right: auto;
-}
-
-section.friends div:nth-of-type(odd) {
-  width: calc(50% - 5% - 2.5%);
-  margin: 0 1.25% 12.5% 5%;
-  margin: 0 1.25%;
-  float: left;
-}
-
-section.friends div:nth-of-type(even) {
-  width: calc(50% - 5% - 2.5%);
-  margin: 0 5% 12.5% 1.25%;
-  margin: 0 1.25%;
-  float: left;
-}
-
-section.friends div img {
-  width: 100%;
-  object-fit: contain;
-} */
-
 /* hide the parrot for now */
 section.friends div:nth-of-type(3) {
   display:none;
 }
 
-/* 1150px */
-/* 980px */
-/* 585px */
 @media(min-width: 585px) {
   section.friends div:nth-of-type(3) {
     display: block;
@@ -467,30 +429,8 @@ section.friends div:nth-of-type(3) {
     width: calc((100% - 8%) / 3);
     width: 25%;
     margin: 0 4.15%;
-  /* float: left; */
   }
 }
-
-
-
-/* 
-section.friends ul {
-  list-style-type: none;
-  display: inline;
-  display: block;
-  margin: 0 auto;
-  /* padding: 1px; */
-/* } */
-
-/* section.friends ul li { */
-  /* display: inline-block; */
-  /* float: left; */
-/* } */
-/* 
-section.friends ul li img {
-  width: 25%;
-  display: block;
-} */
 
 
 /* =============== linksOfInterest ====================== */
@@ -499,7 +439,6 @@ section.interest {
 }
 
 section.interest ul {
-  /* border: 3px solid white; */
   padding: 0px;
   list-style-type: none;
   text-align: center;
@@ -511,7 +450,6 @@ section.interest li {
   display: block;
   max-width: 50%;
   margin: 1rem 30%;
-  /* margin: 0px; */
   padding: 0px;
 }
 
@@ -532,9 +470,6 @@ section.interest a {
   display: inline-block;
 }
 
-/* 1150px */
-/* 980px */
-/* 585px */
 @media(min-width: 585px) {
   section.interest li {
     display: inline-block;
@@ -551,25 +486,6 @@ section.interest a {
   }
 }
 
-
-/* Adams Idea */
-/* .interest li {
-  position: relative;
-}
-.interest li::before {
-  position: absolute;
-  top: -20px;
-  left: 25px;
-  font-family: 'Font Awesome';
-}
-
-.interest ul:nth-child(1) {
-  content: '\f066';
-}
-
-.interest ul:nth-child(2) {
-  content: '\f076'
-} */
 /* =============== Posterboard ====================== */
 section.posterboard {
   background: var(--white);
@@ -635,12 +551,6 @@ section.posterboard p {
 }
 
 /* =============== Footer ====================== */
-/* 1150px */
-/* 980px */
-/* 585px */
-
-
-
 footer {
   clear: both;
   text-align: center;
@@ -711,7 +621,6 @@ footer .copyright {
   width: 100%;
 }
 
-/* Tablet width */
 @media(min-width: 585px) {
   footer .subscribe {
     width: calc(100% / 2);
@@ -738,7 +647,6 @@ footer .copyright {
   }
 }
 
-/* wide tablet width */
 @media(min-width: 980px) {
   footer nav,
   footer .subscribe,
@@ -756,10 +664,5 @@ footer .copyright {
   footer nav ul li {
     display: block;
   }
-
-}
-
-/* Computer */
-@media(min-width: 1150px) {
 
 }
