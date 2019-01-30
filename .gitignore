@@ -2,3 +2,5 @@
 .env
 *.psd
 node_modules
+*.zip
+ignore
