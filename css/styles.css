@@ -411,7 +411,7 @@ section.friends div {
 
 section.friends img {
   width: 100%;
-  margin: 1rem auto;
+  margin: 1rem auto 3rem auto;
   display: block;
 }
 
